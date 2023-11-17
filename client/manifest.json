@@ -1,0 +1,15 @@
+{
+  "name": "AttenSOL",
+  "description": "Don't even think of skipping the class online!",
+  "version": "1.69",
+  "manifest_version": 3,
+  "content_scripts": [{
+      "matches": ["*://meet.google.com/*-*-*"],
+      "css": ["src/style.css"],
+      "js": ["src/elem.js", "src/websocket.js","src/chart.js", "src/doughnut.js", "src/tables.js", "src/main.js"]
+  }],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["identity", "identity.email"]
+}
