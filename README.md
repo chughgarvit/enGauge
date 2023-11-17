@@ -1,4 +1,4 @@
-# enGauge: Monitoring Listener Focus in Online Meetings using Ear-Based Inertial Sensing
+# Exploring Earables to Monitor Temporal Lack of Focus during Online Meetings to Identify Onset of Neurological Disorders
 
 ## Abstract
 
