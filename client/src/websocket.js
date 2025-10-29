@@ -50,9 +50,6 @@ function onMessage(msg) {
         case "Add new":
             appendChart(document.getElementById("Charts"), reply.name, reply.uid);
             break;
-        case "Update":
-            makeChart(reply.uid, Math.floor(Math.random() * (100 - 60) + 60));
-            break;
         case "Request Frames":
             manualFlag = reply.manualFlag;
             sendFrames();

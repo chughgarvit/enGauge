@@ -6,8 +6,6 @@ import numpy as np
 import os
 import pandas as pd
 
-from torch.utils.data.sampler import SubsetRandomSampler
-
 AGGREGATE = 0
 NUM_AUDI = 0
 PRSNT_SCORE = 0
@@ -42,13 +40,8 @@ length = len(dataset)
 split = int(0.2 * length)
 indices = list(range(length))
 
-random_seed = 42
-np.random.seed(random_seed)
-np.random.shuffle(indices)
-
 train_indices, test_indices = indices[split:], indices[:split]
 
-val = SubsetRandomSampler(test_indices)
 testloader = torch.utils.data.DataLoader(dataset, batch_size=1, sampler=val)
 print(len(testloader))
 
